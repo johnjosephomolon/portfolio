@@ -13,6 +13,48 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.intro {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark);
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+}
+
+.logo-header span:nth-child(2) {
+    color: var(--primary);
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
 /* Navigation */
 
 .nav-bar {
@@ -130,24 +172,64 @@ nav {
 /* Landing page */
 .home {
     background-color: var(--dark);
+    background-size: cover;
+    background-position: center;
     color: var(--light);
+    height: 100vh;
+}
+
+
+.container-h {
+    position: absolute;
+    height: auto;
     width: 100%;
-    padding-left: 50px;
-    padding-top: 150px;
-    height: 500px;
+    top: 35%;
     font-size: 1.5rem;
+    padding-left: 100px;
 }
 
 .home h1 span {
     color: var(--primary);
+    font-weight: 600;
 }
+
+.frame {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    margin: 30px;
+    background-color: var(--light);
+    background-image: url(img/2.JPG);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    left: 870px;
+    top: -180px;
+}
+
+.frame2 {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    margin: 30px;
+    background-color: var(--light);
+    background-image: url(img/1.JPG);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    left: 1050px;
+    top: -50px;
+}
+
 /* Landing page */
 
 /* About page */
 .about {
     background-color: var(--primary);
     width: auto;
-    height: 500px;
+    height: 100vh;
 }
 /* About page */
 
@@ -155,9 +237,22 @@ nav {
 .contact {
     background-color: var(--dark);
     width: auto;
-    height: 500px;
+    height: 100vh;
 }
 /* Contact page */
+
+/* Footer */
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    border-top: 3px solid var(--primary );
+}
+/* Footer */
 
 /* mobile page */
 @media (min-width: 786px) {
