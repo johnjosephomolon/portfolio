@@ -34,8 +34,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 hamburger.addEventListener('click', () => {
     hamburger_icon.innerText = hamburger_icon.innerText === 'menu' ?
-    'close'
-    : 'menu';
+    'close' : 'menu';
+    
      
     mobile_menu.classList.toggle("is-open");
 });
