@@ -172,19 +172,24 @@ nav {
 /* Landing page */
 .home {
     background-color: var(--dark);
-    background-size: cover;
-    background-position: center;
     color: var(--light);
     height: 100vh;
+    position: relative;
+    width: 100%
 }
 
 .container-h {
-    position: absolute;
-    height: auto;
-    width: 100%;
-    top: 35%;
-    font-size: 1.5rem;
-    padding-left: 100px;
+    height: 100vh;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-h {
+    position: relative;
+    font-size: 1.25rem;
+    left: 150px;
 }
 
 .home h1 span {
@@ -200,6 +205,8 @@ nav {
     top: 60px;
     margin: 200px;
     color: var(--light);
+    border-radius: 5px;
+    left: -45px;
 }
 
 .btn-h::after, .btn-h::before {
@@ -212,6 +219,7 @@ nav {
     bottom: 0;
     z-index: 1;
     transition: transform 0.3s ease;
+    border-radius: 5px;
 }
 
 .btn-h:hover::after {
@@ -225,35 +233,36 @@ nav {
 }
 
 .frame {
-    position: absolute;
+    position: relative;
     width: 350px;
-    height: 450px;
+    height: 400px;
     padding: 10px;
     margin: 30px;
     background-color: var(--light);
     background-image: url(img/2.JPG);
-    background-size: 100% ;
+    background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 5px;
-    left: 870px;
-    top: -180px;
+    right: -250px;
+    top: -50px;
 }
 
 .frame2 {
-    position: absolute;
+    position: relative;
     width: 350px;
-    height: 450px;
+    height: 400px;
     padding: 10px;
     margin: 30px;
     background-color: var(--light);
     background-image: url(img/1.JPG);
-    background-size: 100% ;
+    background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 5px;
-    left: 1050px;
-    top: -50px;
+    left: -40px;
+    top: 100px;
 }
 
+/* shape divs */
 .shape div {
     position: absolute;
     width: 60px;
@@ -263,30 +272,28 @@ nav {
 }
 
 .shape div:nth-child(1) {
-    top: -130px;
+    top: 130px;
     left: 10%;
     animation: animate 12s linear infinite reverse;
     border-color: var(--primary);
 }
 
 .shape div:nth-child(2) {
-    top: 0%;
+    top: 600px;
     left: 20%;
     animation: animate 15s linear infinite reverse;
 }
 
 .shape div:nth-child(3) {
-    top: 130px;
-    left: 30%;
-    animation: animates 9s linear infinite reverse;
-    border-color: var(--primary);
+    top: 250px;
+    left: 600px;
+    animation: animate 9s linear infinite reverse;
 }
 
 .shape div:nth-child(4) {
     top: 250px;
     left: 10%;
     animation: animate 10s linear infinite reverse;
-    border-color: var(--primary);
 }
 
 .shape div:nth-child(5) {
@@ -297,23 +304,24 @@ nav {
 }
 
 .shape div:nth-child(6) {
-    top: -130px;
-    right: 200px;
+    top: 130px;
+    right: 150px;
     animation: animates 12s linear infinite reverse;
     border-color: var(--primary);
 }
 
 .shape div:nth-child(7) {
-    top: 0%;
-    right: 900px;
+    top: 100px;
+    right: 800px;
     animation: animates 15s linear infinite reverse;
     border-color: var(--primary);
 }
 
 .shape div:nth-child(8) {
-    top: 130px;
+    top: 600px;
     right: 700px;
-    animation: animate 9s linear infinite reverse;
+    animation: animates 9s linear infinite reverse;
+    border-color: var(--primary);
 }
 
 .shape div:nth-child(9) {
@@ -323,16 +331,17 @@ nav {
 }
 
 .shape div:nth-child(10) {
-    top: 400px;
-    right: 40%;
+    top: 550px;
+    right: 30px;
     animation: animates 7s linear infinite reverse;
 }
 
 .shape div:nth-child(11) {
-    top: 400px;
-    left: 200px;
+    top: 450px;
+    left: 100px;
     animation: animates 7s linear infinite reverse;
 }
+
 
 @keyframes animate {
     0% {
@@ -348,11 +357,11 @@ nav {
 @keyframes animates {
     0% {
         transform: scale(0) translateX(0) rotate(0);
-        opacity: 1;
+        opacity: 0;
     }
     100% {
         transform: scale(1.3) translateX(90px) rotate(360deg);
-        opacity: 0;
+        opacity: 1;
     }
 }
 
@@ -361,9 +370,71 @@ nav {
 /* About page */
 .about {
     background-color: var(--primary);
-    width: auto;
-    height: 100vh;
+    width: 100%;
+    padding: 78px 0px;
 }
+
+.container-a {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imge {
+    margin: 60px;
+}
+
+.frame-a {
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    background-color: var(--light);
+    background-image: url(img/3.JPG);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.btn-a {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 200px;
+    color: var(--light);
+    border-radius: 5px;
+}
+
+.btn-a::after, .btn-a::before {
+    border: 3px solid var(--light);
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn-a:hover::after {
+    transform: translate(-5px, -5px);
+    border: 3px solid var(--dark);
+}
+
+.btn-a:hover::before {
+    border: 3px solid var(--dark);
+    transform: translate(5px, 5px);
+}
+
+.aboutme {
+    width: 600px;
+}
+
+
 /* About page */
 
 /* Contact page */
